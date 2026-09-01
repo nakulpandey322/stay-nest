@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://staynest-api.onrender.com/api',   // apna Render URL yahan daalo
 });
 
-// Attach the JWT (if present) to every outgoing request
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('staynest_token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
