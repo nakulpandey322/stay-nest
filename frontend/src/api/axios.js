@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://staynest-api.onrender.com/api',   // apna Render URL yahan daalo
+baseURL: 'https://stay-nest-api.onrender.com/api',   // apna Render URL yahan daalo
 });
 
 api.interceptors.request.use((config) => {
