@@ -1,3 +1,4 @@
+
 # StayNest — MERN Booking Platform
 
 An Airbnb-inspired full-stack app: MongoDB + Express + React (Vite) + Node.
