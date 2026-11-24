@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-baseURL: 'https://stay-nest-api.onrender.com/api',   // apna Render URL yahan daalo
+baseURL: import.meta.env.VITE_API_URL || '/api',  // Paste Your Render URL
 });
 
 api.interceptors.request.use((config) => {
