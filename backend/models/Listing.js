@@ -6,11 +6,12 @@ const listingSchema = new mongoose.Schema(
     title: { type: String, required: true, trim: true },
     description: { type: String, required: true },
     images: [{ type: String }],
-    address: {
-      city: { type: String, required: true },
-      country: { type: String, required: true },
-      line1: { type: String },
-    },
+address: {
+  city: { type: String, required: true },
+  state: { type: String },
+  country: { type: String, required: true },
+  line1: { type: String },
+},
     location: {
       // GeoJSON point for map / nearby search
       type: { type: String, enum: ['Point'], default: 'Point' },
@@ -22,11 +23,12 @@ const listingSchema = new mongoose.Schema(
     beds: { type: Number, default: 1 },
     baths: { type: Number, default: 1 },
     amenities: [{ type: String }],
-    category: {
-      type: String,
-      enum: ['house', 'apartment', 'cabin', 'villa', 'unique', 'beachfront'],
-      default: 'house',
-    },
+  category: {
+  type: String,
+  enum: ['house', 'apartment', 'cabin', 'villa', 'unique', 'beachfront',
+         'hotel', 'lounge', 'resort', 'homestay'],
+  default: 'house',
+},
     ratingAverage: { type: Number, default: 0 },
     ratingCount: { type: Number, default: 0 },
   },
